@@ -1,1 +1,1 @@
-## Vanguard - Advanced PHP Login and User Management
+## CJ API Usage with Laravel Login
