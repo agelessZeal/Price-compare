@@ -1,0 +1,16 @@
+{
+  "remember_me":true,
+  "notifications_signup_email":false,
+  "forgot_password":true,
+  "login_reset_token_lifetime":"30",
+  "throttle_enabled":true,
+  "throttle_attempts":3,
+  "throttle_lockout_time":2,
+  "reg_enabled":true,
+  "reg_email_confirmation":false,
+  "2fa":{"enabled":true},
+  "app_name":"Bastaprice",
+  "registration":{ "captcha":{"enabled":false}},
+  "tos":false,
+  "captcha":{"enabled":false}
+}

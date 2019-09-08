@@ -1,0 +1,76 @@
+{
+    "name": "loshmis/vanguard",
+    "description": "Advanced PHP Login and User Management",
+    "keywords": ["advanced", "secure", "login", "user management", "authentication", "authorization", "register"],
+    "type": "project",
+    "require": {
+        "php": ">=7.0.0",
+        "anhskohbo/no-captcha": "2.*",
+        "anlutro/l4-settings": "^0.4.6",
+        "croscon/commissionjunction-php": "dev-master",
+        "fideloper/proxy": "~3.3",
+        "intervention/image": "^2.3",
+        "jenssegers/agent": "^2.5",
+        "laracasts/presenter": "^0.2.1",
+        "laravel/framework": "5.5.*",
+        "laravel/socialite": "^3.0",
+        "laravelcollective/html": "^5.1",
+        "league/fractal": "^0.16.0",
+        "paragonie/random_compat": "~1.4",
+        "proengsoft/laravel-jsvalidation": "2.1.*",
+        "tymon/jwt-auth": "1.0.0-rc.1",
+        "webpatser/laravel-countries": "^1.4"
+    },
+    "require-dev": {
+        "symfony/css-selector": "~3.0",
+        "symfony/dom-crawler": "~3.0",
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~6.0",
+        "barryvdh/laravel-ide-helper": "2.4.*",
+        "barryvdh/laravel-debugbar": "3.1.*",
+        "laravel/browser-kit-testing": "^2.0",
+        "filp/whoops": "~2.0"
+    },
+    "autoload": {
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "psr-4": {
+            "Vanguard\\": "app/"
+        },
+        "files": [
+            "app/Support/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+            ]
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate"
+        ],
+
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}

@@ -1,0 +1,99 @@
+/* Star and NPS rating style*/
+.custom-flexcontrol-offscreen{
+display:none !important;
+}
+.ff-rating-widget {
+    min-height: 59px;
+    text-align:left;    display: inline-block;
+}
+
+.ff-rating-widget a {
+    min-height:24px;
+    display: block;
+    float: left;
+}
+.ff-rating-widget span {
+   font-size:11px;
+  display: inline-block;
+     white-space: nowrap;
+}
+.ff-rating-widget a>span.rating-label-last
+{
+    float: right;
+}
+.ff-rating-widget.star-rating-control a>span.star-icon {
+    height: 24px; 
+    width: 24px;
+     background: url('images/star.png');
+}
+
+.ff-rating-widget.star-rating-control a{
+ width: 26px;
+ margin: 0px 5px 5px 5px;
+ color: #000;
+}
+.ff-rating-widget.nps-rating-control a{
+ width: 22px;
+ font-size: 12px; 
+ color: #000;
+}
+
+.ff-rating-widget.nps-rating-control a>span.nps-text {
+    font-size:inherit;
+    text-align: center;
+    background:transparent url('images/native_radio_btn_unchecked.png') no-repeat 0px 21px;
+}
+
+.ff-rating-widget a>span.nps-text {
+  width: 19px;
+  height: 42px;
+}
+
+.ff-rating-widget a{
+min-height:24px;
+}
+
+.ff-rating-widget.star-rating-control:not(.ff-rating-readonly) a:hover>span.star-icon,
+.ff-rating-widget.star-rating-control a.ff-rating-active>span.star-icon,
+.ff-rating-widget.star-rating-control a.ff-rating-selected>span.star-icon {
+    background-position: 0 24px;
+}
+
+.ff-rating-widget.nps-rating-control a.ff-rating-current > span.nps-text {
+    background:transparent url('images/native_radio_btn_checked.png') no-repeat 0px 21px;
+}
+.ff-rating-widget span.ff-rating-current-rating{
+  float: right;
+  font-size: inherit;
+  padding: 4px;
+}
+
+.ff-rating-widget .rating-label-first{
+    padding-left:1px;
+}
+
+.ff-rating-widget .rating-label-last{
+    padding-right:3px;
+}
+
+li.ff-checkbox-li {
+  padding: 0px;
+  margin: 0px !important;
+  min-height:0px !important;
+  cursor:pointer !important;
+  list-style-type: none !important;
+}
+
+ul.ff-select-to-checkbox-ul {
+  padding-left: 0px; 
+  list-style-type: none;
+  margin:0px;
+}
+ul.ff-select-to-checkbox-ul.ff-ext-horizontal .ff-checkbox-li {
+  float: left;
+}
+
+ul.ff-select-to-checkbox-ul.ff-ext-vertical .ff-checkbox-li {
+  float: left;
+  clear:left;
+}
